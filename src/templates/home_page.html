@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<div class="text-center">
+    <h1>  {{ title }}</h1>
+    <p>Miss India</p>
+    <h1> Hello , worlrd we re working</h1>
+</div>
+<div class="container">
+    <div class="row">
+        <img src="{% static 'img/1.jpg' %}"  />
+        <p> {{  content }}</p>
+    </div>
+</div>
+{% if request.user.is_authenticated %}
+<div class="row">
+    <div class="col">
+        {{  premium_content }}
+    </div>
+</div>
+{% endif %}
+
+
+{% endblock %}
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>{{ title }}</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+   
+
+</body>
+</html> -->

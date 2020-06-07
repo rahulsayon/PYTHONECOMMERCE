@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="container">
+    	<div class="row">
+      <!-- {{ object_list.query }} -->
+	{% for obj in object_list %}
+	    <div class="col">
+        {% include 'products/snippets/card.html' with instance=obj  %}
+        {% cycle  '<h1> Hello There </h1>'  '' %}
+        </div>
+   	{% endfor %}
+</div>
+</div>
+{% endblock %}
